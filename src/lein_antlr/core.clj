@@ -2,11 +2,12 @@
  (:import
    [org.antlr.v4 Tool]))
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn antlr
+ [file]
+ (Tool/main (into-array String [file]))
+)
 
 (defn -main
  [& args]
- (foo "Test"))
+ ;; TO DO - Remove this hard coded path...
+ (antlr "/home/ubuntu/code/lein-antlr/Test.g4"))
