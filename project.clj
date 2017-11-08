@@ -3,6 +3,6 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :main "lein-antlr.core"
+  :main lein-antlr.core
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.antlr/antlr4 "4.7"]])
