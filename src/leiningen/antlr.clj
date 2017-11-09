@@ -17,5 +17,4 @@
 (defn antlr
  "Compiles antlr grammars"
  [project & args]
- ;; TO DO - Remove this hard coded path...
- (antlr-tool "/home/ubuntu/code/lein-antlr/Test.g4"))
+ (antlr-tool (get project :antlr-cmd)))
