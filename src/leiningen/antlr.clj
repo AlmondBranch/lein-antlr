@@ -1,10 +1,10 @@
-(ns lein-antlr.core
+(ns leiningen.antlr
  (:import
    [org.antlr.v4 Tool])
  (:use [clojure.string :only (split)])
 )
 
-(defn antlr
+(defn antlr-tool
  [file]
  (Tool/main (into-array String [file]))
 )
@@ -14,7 +14,8 @@
  (split args #" ")
 )
 
-(defn -main
- [& args]
+(defn antlr
+ "Compiles antlr grammars"
+ [project & args]
  ;; TO DO - Remove this hard coded path...
- (antlr "/home/ubuntu/code/lein-antlr/Test.g4"))
+ (antlr-tool "/home/ubuntu/code/lein-antlr/Test.g4"))
