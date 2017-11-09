@@ -5,8 +5,8 @@
 )
 
 (defn antlr-tool
- [file]
- (Tool/main (into-array String [file]))
+ [args]
+ (Tool/main (into-array String args))
 )
 
 (defn split-args
@@ -17,4 +17,7 @@
 (defn antlr
  "Compiles antlr grammars"
  [project & args]
- (antlr-tool (get project :antlr-cmd)))
+  (-> (get project :antlr-cmd)
+     split-args
+     antlr-tool)
+)
