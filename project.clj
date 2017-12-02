@@ -4,5 +4,6 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :eval-in-leiningen true
-  :dependencies [[org.antlr/antlr4 "4.7"]]
+  :dependencies [[org.antlr/antlr4 "4.7"]
+                 [com.github.almondbranch/command-line-parser "1.2.0"]]
 )

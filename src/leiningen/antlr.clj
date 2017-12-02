@@ -1,6 +1,7 @@
 (ns leiningen.antlr
  (:import
-   [org.antlr.v4 Tool])
+   [org.antlr.v4 Tool]
+   [com.github.almondbranch.command_line_parser CmdArgsReader])
  (:use [clojure.string :only (split)])
 )
 
@@ -11,7 +12,7 @@
 
 (defn split-args
  [args]
- (split args #" ")
+ (CmdArgsReader/read args)
 )
 
 (defn antlr
