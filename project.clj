@@ -1,4 +1,4 @@
-(defproject lein-antlr "0.1.0-SNAPSHOT"
+(defproject almondbranch/lein-antlr "1.0.0"
   :description "Lein plugin adding a task for running antlr4"
   :url "https://github.com/AlmondBranch/lein-antlr"
   :license {:name "MIT License"
