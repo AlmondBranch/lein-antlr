@@ -11,10 +11,3 @@
      CmdArgsReader/read
      Tool/main)
 )
-
-(defn get-output-arg-value
- "Retrieves the value of the output argument in the antlr command line"
- [cmd-line]
-  (let [args (seq (CmdArgsReader/read cmd-line))]
-    (second (drop-while #(not= % "-o") args)
-  )))
